@@ -5,7 +5,6 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Efecto para detectar el scroll y cambiar el estilo del header
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -24,20 +23,19 @@ export default function Header() {
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled 
-  ? 'bg-white/80 backdrop-blur-md shadow-md py-3' 
-  : 'bg-transparent py-5'
+          ? 'bg-white/80 backdrop-blur-md shadow-md py-3' 
+          : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="#inicio" className="text-2xl font-extrabold text-slate-900 tracking-tight">
-              Dev<span className="text-blue-600">Solutions</span>
+            <a href="#inicio" className="flex items-center gap-2.5 text-2xl font-extrabold text-slate-900 tracking-tight">
+              <img src="/logonubix.png" alt="Logo Nubix Software" className="h-8 w-auto" />
+              <span>Nubix<span className="text-blue-600"> Software</span></span>
             </a>
           </div>
           
-          {/* Navegación Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
             {links.map((link) => (
               <a 
@@ -49,7 +47,6 @@ export default function Header() {
               </a>
             ))}
             
-            {/* Botón CTA Header */}
             <a 
               href="#contacto"
               className="hidden lg:flex items-center gap-2 px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-bold rounded-lg transition-colors shadow-md"
@@ -58,7 +55,6 @@ export default function Header() {
             </a>
           </nav>
 
-          {/* Botón Menú Mobile */}
           <div className="md:hidden flex items-center">
             <button 
               onClick={() => setIsOpen(!isOpen)} 
@@ -70,7 +66,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Menú Desplegable Mobile */}
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg">
           <div className="px-4 pt-2 pb-6 space-y-2">

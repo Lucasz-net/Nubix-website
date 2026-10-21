@@ -3,3 +3,9 @@
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 }
+
+/* Configuraciones globales de la página */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* Evita que el header fijo tape el contenido al navegar */
+}
