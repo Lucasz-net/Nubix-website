@@ -1,6 +1,6 @@
 import { Download, MonitorDown, MousePointerClick, Rocket, ShieldCheck, Gift, Info } from 'lucide-react';
 
-const linkDescarga = "https://drive.google.com/file/d/1rQ8lMsrw7H18Lhe2eUFfouAYzkfNud5r/view?usp=drive_link";
+const linkDescarga = "https://drive.google.com/file/d/1ymc_gWqgkZR8RrxOZYUs2VPLIN6N5gTk/view?usp=drive_link";
 
 // Mismo fondo celeste con brillos que usan los mockups de la demo
 const fondoDemo = {
